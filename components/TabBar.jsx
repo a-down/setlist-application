@@ -59,8 +59,7 @@ export default function TabBar({ state, descriptors, navigation }) {
       left: 12,
       position: 'absolute',
       width: width-58,
-      flexDirection: 'row',
-      transform:
+      flexDirection: 'row'
     }
   })
 
