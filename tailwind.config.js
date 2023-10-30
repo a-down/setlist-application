@@ -42,7 +42,7 @@ module.exports = {
       },
 
       boxShadow: {
-        'brand' : '0 2px 2px #2F3253'
+        'brand' : '0 2px 2px #A7ACB9'
       },
     }
   },

@@ -28,8 +28,6 @@ export default function HomeScreen({ navigation }) {
             <View className="bg-white w-full h-20 rounded-[10px] shadow-brand"></View>
           </View>
           
-
-          
         </ScrollView>
       </View>
     </>
