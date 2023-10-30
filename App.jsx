@@ -8,11 +8,11 @@ import {
   Poppins_700Bold
 } from '@expo-google-fonts/poppins';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LandingScreen from './screens/LandingScreen';
-import HomeScreen from './screens/HomeScreen';
+import HomeNavigation from './screens/HomeNavigation';
 
-const Stack = createStackNavigator()
+const Stack = createNativeStackNavigator()
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -30,7 +30,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Landing" component={LandingScreen} options={{headerShown: false}} />
-        <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
+        <Stack.Screen name="Home" component={HomeNavigation} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
     

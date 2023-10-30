@@ -36,11 +36,13 @@ module.exports = {
         'brand-navy-soft': '#585B75',
         'brand-orange': '#E9764C',
         'brand-yellow': '#FFB66C',
-        'soft-gray': '#FEFFFE',
+        'brand-yellow-soft': '#FFC486',
+        'gray-soft': '#FEFFFE',
+        'gray-background': '#F1F3F6',
       },
 
-      dropShadow: {
-        'brand' : '0 2px 2px rgb(47, 50, 83, .25)'
+      boxShadow: {
+        'brand' : '0 2px 2px #2F3253'
       },
     }
   },
