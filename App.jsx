@@ -30,7 +30,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Landing" component={LandingScreen} options={{headerShown: false}} />
-        <Stack.Screen name="Home" component={HomeNavigation} options={{headerShown: false}} />
+        <Stack.Screen name="Main" component={HomeNavigation} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
     
