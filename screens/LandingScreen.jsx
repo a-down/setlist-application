@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View, ImageBackground, Image, Pressable } from 'react-native';
+import { Text, View, ImageBackground, Image, Pressable } from 'react-native';
 
-export default function LandingScreen() {
+export default function LandingScreen({ navigation }) {
 
   return (
     <View className="flex-1 bg-brand-navy">
@@ -16,7 +16,7 @@ export default function LandingScreen() {
               <Text className="text-brand-navy font-regular mb-3">Play your set anywhere</Text>
               <Text className="text-brand-navy font-regular opacity-80 mb-4 leading-normal">SetList provides a simple interface for storing, grouping, and performing our favorite songs</Text>
 
-              <Pressable className="bg-brand-yellow h-16 rounded-full justify-center mb-4">
+              <Pressable className="bg-brand-yellow h-16 rounded-full justify-center mb-4" onPress={() => navigation.navigate("Home")}>
                 <Text className="font-bold text-brand-navy text-center">Find a song to play</Text>
               </Pressable>
 
