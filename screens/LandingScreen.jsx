@@ -16,7 +16,7 @@ export default function LandingScreen({ navigation }) {
               <Text className="text-brand-navy font-regular mb-3">Play your set anywhere</Text>
               <Text className="text-brand-navy font-regular opacity-80 mb-4 leading-normal">SetList provides a simple interface for storing, grouping, and performing our favorite songs</Text>
 
-              <Pressable className="bg-brand-yellow active:bg-[#FFC486] h-16 rounded-full justify-center mb-4" onPress={() => navigation.navigate("Main")}>
+              <Pressable className="bg-brand-yellow active:bg-[#FFC486] h-16 rounded-full justify-center mb-4" onPress={() => navigation.replace("Main")}>
                 <Text className="font-bold text-brand-navy text-center">Find a song to play</Text>
               </Pressable>
 

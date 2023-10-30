@@ -9,9 +9,9 @@ export default function TabBar({ state, descriptors, navigation }) {
   function activeBackgroundColor(tab) {
     if (tab === 'Home') {
       return '#91A5CB'
-    } else if (tab = 'Sets') {
+    } else if (tab === 'Sets') {
       return '#E9764C'
-    } else if (tab = 'Songs') {
+    } else if (tab === 'Songs') {
       return '#FFB56E'
     }
   }
