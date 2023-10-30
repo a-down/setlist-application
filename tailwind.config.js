@@ -2,7 +2,47 @@
 module.exports = {
   content: ["./App.{js,jsx,ts,tsx}", "./screens/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    fontSize: {
+      xs: ['12px', '12px'],
+      sm: ['14px', '14px'],
+      base: ['16px', '16px'],
+      lg: ['18px', '18px'],
+      xl: ['20px', '20px'],
+    },
+
+    extend: {
+
+      backgroundImage: {
+        'landing-image': "url('/public/images/main-image.png')"
+      },
+
+      fontFamily: {
+        regular: ['Poppins_400Regular'],
+        medium: ['Poppins_500Medium'],
+        semibold: ['Poppins_600SemiBold'],
+        bold: ['Poppins_700Bold'],
+      },
+
+      fontSize: {
+        'xxs': ['10px', '10px'],
+        '2xl': ['24px', '24px'],
+        '3xl': ['30px', '30px'],
+        '4xl': ['36px', '36px'],
+        '5xl': ['48px', '48px']
+      },
+
+      colors: {
+        'brand-navy': '#2F3253',
+        'brand-navy-soft': '#585B75',
+        'brand-orange': '#E9764C',
+        'brand-yellow': '#FFB66C',
+        'soft-gray': '#FEFFFE',
+      },
+
+      dropShadow: {
+        'brand' : '0 2px 2px rgb(47, 50, 83, .25)'
+      },
+    }
   },
   plugins: [],
 }
