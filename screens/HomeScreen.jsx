@@ -20,11 +20,15 @@ export default function HomeScreen({ navigation }) {
             <SetCard />
             <SetCard />
             <SetCard />
+            <SetCard />
+            <SetCard />
 
           </View>
-          <View>
+          <View style={{gap: 8, marginBottom: 128}}>
             <Text className="text-brand-navy font-bold text-2xl mt-4 mb-4">Recently Viewed</Text>
 
+            <SongCard />
+            <SongCard />
             <SongCard />
             <SongCard />
             <SongCard />
