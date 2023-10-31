@@ -1,8 +1,9 @@
-import { Text, View, ScrollView, ImageBackground, Image, Pressable } from 'react-native';
+import { Text, View, ScrollView, ImageBackground, Image, Pressable, useWindowDimensions } from 'react-native';
 import SetCard from '../components/SetCard';
 import SongCard from '../components/SongCard';
 
 export default function HomeScreen({ navigation }) {
+  const { width } = useWindowDimensions();
 
 
   return (
@@ -24,7 +25,7 @@ export default function HomeScreen({ navigation }) {
             <SetCard />
 
           </View>
-          <View style={{gap: 8, marginBottom: 128}}>
+          <View style={{gap: 8, marginBottom: 192}}>
             <Text className="text-brand-navy font-bold text-2xl mt-4 mb-2">Recently Viewed</Text>
 
             <SongCard />
@@ -36,6 +37,12 @@ export default function HomeScreen({ navigation }) {
           </View>
           
         </ScrollView>
+
+        <View className="bg-white shadow-brand rounded-full absolute bottom-[102px] left-4 p-3 flex-row items-center" style={{width: width-32, gap: 8}}>
+          <View className="w-6 aspect-square bg-brand-navy opacity-60 rounded-full"/>
+          <Text className="mt-1 font-semibold text-brand-navy opacity-60">Search for a set or song</Text>
+        </View>
+
       </View>
     </>
   )

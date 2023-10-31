@@ -1,8 +1,9 @@
-import { Text, View, ScrollView, ImageBackground, Image, Pressable, Alert } from 'react-native';
+import { Text, View, ScrollView, ImageBackground, Image, Pressable, Alert, useWindowDimensions } from 'react-native';
 import SetCard from '../components/SetCard';
 
 
 export default function SetsScreen() {
+  const { width } = useWindowDimensions();
 
 
   return (
@@ -30,22 +31,31 @@ export default function SetsScreen() {
 
             <SetCard slim={true}/>
             <SetCard slim={true}/>
+            <SetCard slim={true}/>
+            <SetCard slim={true}/>
+            <SetCard slim={true}/>
 
           </View>
 
-          <View style={{gap: 8, marginBottom: 16}}>
+          <View style={{gap: 8, marginBottom: 192}}>
             <Text className="text-brand-navy text-xl mb-2">Your Sets</Text>
 
             <SetCard slim={true}/>
             <SetCard slim={true}/>
+            <SetCard slim={true}/>
+            <SetCard slim={true}/>
+            <SetCard slim={true}/>
 
           </View>
-
-          
 
         </View>
         
       </ScrollView>
+
+      <View className="bg-white shadow-brand rounded-full absolute bottom-[102px] left-4 p-3 flex-row items-center" style={{width: width-32, gap: 8}}>
+        <View className="w-6 aspect-square bg-brand-navy opacity-60 rounded-full"/>
+        <Text className="mt-1 font-semibold text-brand-navy opacity-60">Search for a set</Text>
+      </View>
     </View>
   )
 }
