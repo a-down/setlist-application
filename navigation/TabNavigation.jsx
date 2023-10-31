@@ -8,8 +8,7 @@ import TabBar from '../components/TabBar';
 
 const Tab = createBottomTabNavigator();
 
-
-export default function HomeNavigation({ navigation }) {
+export default function TabNavigation({ navigation }) {
 
   return (
     <>

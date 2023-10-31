@@ -38,10 +38,10 @@ export default function HomeScreen({ navigation }) {
           
         </ScrollView>
 
-        <View className="bg-white shadow-brand rounded-full absolute bottom-[102px] left-4 p-3 flex-row items-center" style={{width: width-32, gap: 8}}>
+        <Pressable className="bg-white shadow-brand rounded-full absolute bottom-[102px] left-4 p-3 flex-row items-center" style={{width: width-32, gap: 8}} onPress={() => navigation.navigate('LandingTest')}>
           <View className="w-6 aspect-square bg-brand-navy opacity-60 rounded-full"/>
           <Text className="mt-1 font-semibold text-brand-navy opacity-60">Search for a set or song</Text>
-        </View>
+        </Pressable>
 
       </View>
     </>
