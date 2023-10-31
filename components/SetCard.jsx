@@ -2,10 +2,9 @@ import { Text, View, Pressable } from 'react-native';
 import { useEffect, useState } from 'react';
 
 
-export default function SetCard({ isSlim = false }) {
+export default function SetCard({ slim = false }) {
 
-
-  if (isSlim) {
+  if (slim) {
     return (
       <View className="flex-row justify-between items-center bg-white w-full rounded-[10px] shadow-brand p-4 overflow-clip border-l-[10px] border-brand-orange">
 

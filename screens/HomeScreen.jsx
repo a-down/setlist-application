@@ -15,7 +15,7 @@ export default function HomeScreen({ navigation }) {
 
         <ScrollView className="bg-gray-background flex-1 rounded-t-[20px] p-4">
           <View style={{gap: 8, marginBottom: 16}}>
-            <Text className="text-brand-navy font-bold text-2xl mt-4 mb-4">Upcoming Sets</Text>
+            <Text className="text-brand-navy font-bold text-2xl mt-4 mb-2">Upcoming Sets</Text>
 
             <SetCard />
             <SetCard />
@@ -25,7 +25,7 @@ export default function HomeScreen({ navigation }) {
 
           </View>
           <View style={{gap: 8, marginBottom: 128}}>
-            <Text className="text-brand-navy font-bold text-2xl mt-4 mb-4">Recently Viewed</Text>
+            <Text className="text-brand-navy font-bold text-2xl mt-4 mb-2">Recently Viewed</Text>
 
             <SongCard />
             <SongCard />
