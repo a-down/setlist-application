@@ -1,5 +1,6 @@
 import { Text, View, ScrollView, ImageBackground, Image, Pressable } from 'react-native';
-
+import SetCard from '../components/SetCard';
+import SongCard from '../components/SongCard';
 
 export default function HomeScreen({ navigation }) {
 
@@ -16,16 +17,18 @@ export default function HomeScreen({ navigation }) {
           <View className="mb-4">
             <Text className="text-brand-navy font-bold text-2xl mt-4 mb-4">Upcoming Sets</Text>
 
-            <View className="bg-white w-full h-20 rounded-[10px] shadow-brand mb-2"></View>
-            <View className="bg-white w-full h-20 rounded-[10px] shadow-brand mb-2"></View>
-            <View className="bg-white w-full h-20 rounded-[10px] shadow-brand"></View>
+            <SetCard />
+            <SetCard />
+            <SetCard />
+
           </View>
           <View>
             <Text className="text-brand-navy font-bold text-2xl mt-4 mb-4">Recently Viewed</Text>
 
-            <View className="bg-white w-full h-20 rounded-[10px] shadow-brand mb-2"></View>
-            <View className="bg-white w-full h-20 rounded-[10px] shadow-brand mb-2"></View>
-            <View className="bg-white w-full h-20 rounded-[10px] shadow-brand"></View>
+            <SongCard />
+            <SongCard />
+            <SongCard />
+
           </View>
           
         </ScrollView>
