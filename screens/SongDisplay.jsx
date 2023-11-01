@@ -1,77 +1,77 @@
 import { View, Text, Pressable, useWindowDimensions } from 'react-native';
-
+import song from '../utils/ComeOnGetHigher';
 
 export default function SongDisplay({ navigation }) {
   const { width } = useWindowDimensions();
 
-  const song = {
-    title: 'Come On Get Higher',
-    artist: 'Matt Nathanson',
-    key: 'F',
-    capo: {
-      capoPreferred: true,
-      capoKey: 'C',
-      capoPosition: 7
-    },
-    creator: 'a-down',
-    songData: [
-      {
-        sectionTitle: 'Chorus',
-        sectionLines: [
-          [
-            {
-              content: 'Well you only need the',
-              type: 'lyrics'
-            },
-            {
-              content: 'F',
-              type: 'chord'
-            },
-            {
-              content: "light when it's burning low",
-              type: 'lyrics'
-            },
-          ],
-          [
-            {
-              content: 'Well you only need the',
-              type: 'lyrics'
-            },
-            {
-              content: 'F',
-              type: 'chord'
-            },
-            {
-              content: "light when it's burning",
-              type: 'lyrics'
-            },
-            {
-              content: 'F',
-              type: 'chord'
-            },
-            {
-              content: "low",
-              type: 'lyrics'
-            },
-          ],
-          [
-            {
-              content: 'Well you only need the',
-              type: 'lyrics'
-            },
-            {
-              content: 'F',
-              type: 'chord'
-            },
-            {
-              content: "light when it's burning low",
-              type: 'lyrics'
-            },
-          ],
-        ]
-      },
-    ]
-  }
+  // const song = {
+  //   title: 'Come On Get Higher',
+  //   artist: 'Matt Nathanson',
+  //   key: 'F',
+  //   capo: {
+  //     capoPreferred: true,
+  //     capoKey: 'C',
+  //     capoPosition: 7
+  //   },
+  //   creator: 'a-down',
+  //   songData: [
+  //     {
+  //       sectionTitle: 'Chorus',
+  //       sectionLines: [
+  //         [
+  //           {
+  //             content: 'Well you only need the',
+  //             type: 'lyrics'
+  //           },
+  //           {
+  //             content: 'F',
+  //             type: 'chord'
+  //           },
+  //           {
+  //             content: "light when it's burning low",
+  //             type: 'lyrics'
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             content: 'Well you only need the',
+  //             type: 'lyrics'
+  //           },
+  //           {
+  //             content: 'F',
+  //             type: 'chord'
+  //           },
+  //           {
+  //             content: "light when it's burning",
+  //             type: 'lyrics'
+  //           },
+  //           {
+  //             content: 'F',
+  //             type: 'chord'
+  //           },
+  //           {
+  //             content: "low",
+  //             type: 'lyrics'
+  //           },
+  //         ],
+  //         [
+  //           {
+  //             content: 'Well you only need the',
+  //             type: 'lyrics'
+  //           },
+  //           {
+  //             content: 'F',
+  //             type: 'chord'
+  //           },
+  //           {
+  //             content: "light when it's burning low",
+  //             type: 'lyrics'
+  //           },
+  //         ],
+  //       ]
+  //     },
+  //   ]
+  // }
 
   console.log(song.songData)
 
