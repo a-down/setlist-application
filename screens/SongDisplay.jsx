@@ -20,7 +20,7 @@ export default function SongDisplay({ navigation }) {
         sectionLines: [
           [
             {
-              content: 'Well you only need the ',
+              content: 'Well you only need the',
               type: 'lyrics'
             },
             {
@@ -34,7 +34,7 @@ export default function SongDisplay({ navigation }) {
           ],
           [
             {
-              content: 'Well you only need the ',
+              content: 'Well you only need the',
               type: 'lyrics'
             },
             {
@@ -42,13 +42,21 @@ export default function SongDisplay({ navigation }) {
               type: 'chord'
             },
             {
-              content: "light when it's burning low",
+              content: "light when it's burning",
               type: 'lyrics'
-            }
+            },
+            {
+              content: 'F',
+              type: 'chord'
+            },
+            {
+              content: "low",
+              type: 'lyrics'
+            },
           ],
           [
             {
-              content: 'Well you only need the ',
+              content: 'Well you only need the',
               type: 'lyrics'
             },
             {
@@ -67,33 +75,33 @@ export default function SongDisplay({ navigation }) {
 
   console.log(song.songData)
 
-  function SongLineElement({ element }) {
-    console.log('element:', element)
+  function SongLineChord({ chord }) {
+    
+    return <Text className="text-brand-yellow bg-brand-navy py-px px-1">{chord}</Text>
+  }
 
-    return element.type === "lyrics" ? (
-      <Text className="text-brand-navy font-medium">{element.content}</Text>
-    ) : (
-      <Text className="text-brand-yellow font-bold">{element.content}</Text>
-    )
+  function SongLineWord({ word }) {
+    return <Text className="text-brand-navy">{word}</Text>
   }
 
   function SongLine({ line }) {
-    console.log('line:', line)
-    return (
-      <>
-        {line.map((element) => (
-          <SongLineElement element={element} />
-        ))}
-      </>
-    )
+    line.map((element) => {
+      if (element.type === 'chord') {
+        return <SongLineChord chord={element.content} />
+      } else {
+        element.content.split(' ').forEach((word) => {
+          return <SongLineWord word={word} />
+        })
+      }
+    })
   }
 
   function SongSection({ section }) {
     console.log('section:', section)
     return (
-      <View className="flex-row">
+      <View className="flex-wrap">
         {section.sectionLines.map((line) => (
-          <SongLine line={line} />
+          <SongLine line={line} className="flex-row justify-start"/>
         ))}
       </View>
     )
@@ -111,12 +119,12 @@ export default function SongDisplay({ navigation }) {
           <Text className="text-2xl font-medium text-brand-navy mt-4">Come On Get Higher</Text>
           <Text className=" text-lg text-brand-navy font-medium opacity-80 mt-2">Matt Nathanson</Text>
           <View className="flex-row" style={{gap: 16}}>
-            <Text className=" text-lg text-brand-navy font-semibold opacity-80 mt-4">
+            <Text className=" text-lg text-brand-navy font-semibold opacity-80 mt-3 pt-1">
               Key:{' '}
               <Text className="font-bold">C</Text>
             </Text>
 
-            <Text className=" text-lg text-brand-navy font-semibold opacity-80 mt-4">
+            <Text className=" text-lg text-brand-navy font-semibold opacity-80 mt-3 pt-1">
               Chords:{' '}
               <Text className="font-bold">C Em F G Am</Text>
             </Text>
@@ -140,10 +148,40 @@ export default function SongDisplay({ navigation }) {
             <Text className="text-brand-navy text-2xl">{'>'}</Text>
           </View>
 
-          <View className="bg-gray-300 w-full h-full mt-8">
+          <View className="w-full h-full mt-4">
+            {/* {song.songData.map((section) => (
+              <SongSection section={section} className=""/>
+            ))} */}
+
             {song.songData.map((section) => (
-              <SongSection section={section} />
+              <>
+                {section.sectionLines.map((line) => (
+                  <View className="flex-row flex-wrap">
+                    {line.map((element) => (
+                      <>
+                        {element.type === 'chord' ? (
+                          <View className="relative">
+                            <View className="bg-gray-background rounded-sm absolute -top-1.5">
+                              <Text className="font-bold text-brand-navy py-px px-1">{element.content}</Text>
+                            </View>
+                          </View>
+                        ) : (
+                          <>
+                            {element.content.split(' ').map((word) => (
+                              <>
+                                {console.log(word)}
+                                <Text style={{lineHeight: 48}} className="text-brand-navy">{word + " "}</Text>
+                              </>
+                            ))}
+                          </>
+                        )}
+                      </>
+                    ))}
+                  </View>
+                ))}
+              </>
             ))}
+
           </View>
 
         </View>
