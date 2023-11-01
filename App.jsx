@@ -11,6 +11,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LandingScreen from './screens/LandingScreen';
 import SearchScreen from './screens/SearchScreen';
+import SongDisplay from './screens/SongDisplay';
 import TabNavigation from './navigation/TabNavigation';
 
 const Stack = createNativeStackNavigator()
@@ -33,6 +34,7 @@ export default function App() {
         <Stack.Screen name="Landing" component={LandingScreen} options={{headerShown: false}} />
         <Stack.Screen name="Main" component={TabNavigation} options={{headerShown: false}} />
         <Stack.Screen name="Search" component={SearchScreen} options={{headerShown: false}} />
+        <Stack.Screen name="Song Display" component={SongDisplay} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
     

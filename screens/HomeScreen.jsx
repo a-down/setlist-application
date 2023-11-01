@@ -18,22 +18,23 @@ export default function HomeScreen({ navigation }) {
           <View style={{gap: 8, marginBottom: 16}}>
             <Text className="text-brand-navy font-bold text-2xl mt-4 mb-2">Upcoming Sets</Text>
 
-            <SetCard />
-            <SetCard />
-            <SetCard />
-            <SetCard />
-            <SetCard />
+            <SetCard navigation={navigation}/>
+            <SetCard navigation={navigation}/>
+            <SetCard navigation={navigation}/>
+            <SetCard navigation={navigation}/>
+            <SetCard navigation={navigation}/>
+
 
           </View>
           <View style={{gap: 8, marginBottom: 192}}>
             <Text className="text-brand-navy font-bold text-2xl mt-4 mb-2">Recently Viewed</Text>
 
-            <SongCard />
-            <SongCard />
-            <SongCard />
-            <SongCard />
-            <SongCard />
-
+            <SongCard navigation={navigation} />
+            <SongCard navigation={navigation} />
+            <SongCard navigation={navigation} />
+            <SongCard navigation={navigation} />
+            <SongCard navigation={navigation} />
+  
           </View>
           
         </ScrollView>

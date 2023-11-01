@@ -15,7 +15,7 @@ export default function SongsScreen() {
       <ScrollView className="bg-gray-background flex-1 rounded-t-[20px] p-4">
         <View style={{ marginBottom: 16}}>
           <View className=" flex-row justify-between mb-4">
-            <Text className="text-brand-navy font-bold text-2xl mt-4">Sets</Text>
+            <Text className="text-brand-navy font-bold text-2xl mt-4">Song</Text>
 
             {/* <Pressable 
               className="bg-brand-orange rounded-[10px] flex-row p-4 items-center active:bg-[#E99170]" style={{gap: 8}}
@@ -27,7 +27,7 @@ export default function SongsScreen() {
 
           <View className="bg-white shadow-brand rounded-full p-3 flex-row items-center mb-8" style={{width: width-32, gap: 8}}>
             <View className="w-6 aspect-square bg-brand-navy opacity-60 rounded-full"/>
-            <Text className="mt-1 font-semibold text-brand-navy opacity-60">Search for a set</Text>
+            <Text className="mt-1 font-semibold text-brand-navy opacity-60">Search for a song</Text>
           </View>
           
           <View style={{gap: 8, marginBottom: 32}}>
