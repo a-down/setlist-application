@@ -30,6 +30,15 @@ export default function SongDisplay({ navigation }) {
           </Text>
         </View>
 
+        <View className="flex-row w-full mt-4" style={{gap: 16}}>
+          <Pressable className="bg-brand-navy rounded-xl flex-1">
+            <Text className="text-lg font-semibold text-brand-yellow text-center py-4">Capo (7)</Text>
+          </Pressable>
+          <Pressable className="bg-transparent rounded-xl flex-1">
+            <Text className="text-lg font-semibold text-brand-yellow text-center py-4">Capo (7)</Text>
+          </Pressable>
+        </View>
+
       </View>
 
       <View className="bg-white shadow-brand rounded-full absolute bottom-[102px] left-4 p-3 flex-row items-center" style={{width: width-32, gap: 8}}>
