@@ -1,5 +1,6 @@
 import { View, Text, Pressable, useWindowDimensions } from 'react-native';
 import song from '../utils/ComeOnGetHigher';
+import SongCarousel from '../components/SongCarousel';
 
 export default function SongDisplay({ navigation }) {
   function SongLineChord({ chord }) {
@@ -82,7 +83,7 @@ export default function SongDisplay({ navigation }) {
 
 
 
-            {song.songData.map((section, index) => (
+            {/* {song.songData.map((section, index) => (
               <View key={index}>
                 {section.sectionLines.map((line, index) => (
                   <View key={index}>
@@ -95,7 +96,9 @@ export default function SongDisplay({ navigation }) {
                   </View>
                 ))}
               </View>
-            ))}
+            ))} */}
+
+            <SongCarousel />
 
             {/* {song.songData.map((section) => (
               <>
