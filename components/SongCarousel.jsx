@@ -11,6 +11,9 @@ import {
 } from 'react-native';
 import { useRef, useState, useEffect } from 'react';
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
+import Carousel from "react-native-reanimated-carousel";
+
+
 
 const data = [
   {
