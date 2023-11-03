@@ -10,8 +10,9 @@ import {
   Pressable
 } from 'react-native';
 import { useRef, useState, useEffect } from 'react';
+import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 
-const DATA = [
+const data = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
     title: 'First Item',
@@ -34,12 +35,10 @@ export default function SongCarousel() {
     ref.current?.scrollToIndex({index: index, animated: true});
   }, [index])
 
-  function handlePress() {
-    console.log('pressing')
-    if (index === DATA.length - 1) {
+  function handleTap() {
+    if (index === data.length - 1) {
       return;
     }
-
     setIndex(index + 1);
   }
 
@@ -47,25 +46,52 @@ export default function SongCarousel() {
     const { width } = useWindowDimensions();
   
     return (
-      <Pressable className="flex-1 justify-center items-center bg-red-200" style={{width: width-32}} onPress={handlePress}>
-        <Text className="flex-1">{title}</Text>
-      </Pressable>
+      <GestureRecognizer 
+        onSwipeRight={() => onSwipeRight()}
+        onSwipeLeft={() => onSwipeLeft()}
+        config={config}
+        className="flex-1">
+        <Pressable className="flex-1 justify-center items-center bg-red-200" style={{width: width-32}} onPress={handleTap}>
+          <Text className="flex-1">{title}</Text>
+        </Pressable>
+      </GestureRecognizer>
     )
   };
 
+  function onSwipeRight() {
+    if (index === 0) {
+      return;
+    }
+    setIndex(index - 1);
+  }
+
+  function onSwipeLeft() {
+    if (index === data.length - 1) {
+      return;
+    }
+    setIndex(index + 1);
+  }
+
+  const config = {
+    velocityThreshold: 0.1,
+    directionalOffsetThreshold: 80,
+  };
+ 
+
   return (
-    <View className="flex-1 justify-center">
-      <FlatList
-        ref={ref}
-        initialScrollIndex={index}
-        data={DATA}
-        renderItem={({item}) => <CarouselItem title={item.title} />}
-        keyExtractor={item => item.id}
-        horizontal
-        showsHorizontalScrollIndicator
-        pagingEnabled
-        bounces={false}
-      />
-    </View>
+
+      <View className="flex-1 justify-center">
+        <FlatList
+          ref={ref}
+          initialScrollIndex={index}
+          data={data}
+          renderItem={({item}) => <CarouselItem title={item.title} />}
+          keyExtractor={item => item.id}
+          horizontal
+          showsHorizontalScrollIndicator
+          pagingEnabled
+          bounces={false}
+        />
+      </View>
   );
 };
