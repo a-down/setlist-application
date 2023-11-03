@@ -148,12 +148,57 @@ export default function SongDisplay({ navigation }) {
             <Text className="text-brand-navy text-2xl">{'>'}</Text>
           </View>
 
-          <View className="w-full h-full mt-4">
+          <View className="w-full h-full mt-2">
             {/* {song.songData.map((section) => (
               <SongSection section={section} className=""/>
             ))} */}
 
+
+
             {song.songData.map((section) => (
+              <>
+                {section.sectionLines.map((line) => (
+                  <View>
+                    <View className="relative">
+                      <View className="">
+                        <Text style={{lineHeight: 40}} className="font-bold text-brand-navy">{line[0]}</Text>
+                      </View>
+                      <Text style={{lineHeight: 40}} className="text-brand-navy absolute top-[18px]">{line[1]}</Text>
+                    </View>
+                  </View>
+                ))}
+              </>
+            ))}
+
+            {/* {song.songData.map((section) => (
+              <>
+                {section.sectionLines.map((line) => (
+                  <View>
+                    <View className="relative"> */}
+                      {/* <View className="">
+                        <Text style={{lineHeight: 40}} className="font-bold text-brand-navy">{console.log(line[0].split(" "))} </Text>
+                      </View> */}
+                      {/* <View>
+                          <Text style={{lineHeight: 40}} className="text-brand-navy">
+                            {line[0].split(" ").map((word) => (
+                              <>
+                              {word 
+                                ? <Text className="font-bold bg-gray-200">{word + " "}</Text> 
+                                : <Text>{word + " "}</Text>}
+                              </>
+                            ))}
+                          </Text>
+                       </View>
+                      <Text style={{lineHeight: 40}} className="text-brand-navy absolute top-5">{line[1]}</Text>
+                    </View>
+                  </View>
+                ))}
+              </>
+            ))} */}
+
+
+
+            {/* {song.songData.map((section) => (
               <>
                 {section.sectionLines.map((line) => (
                   <View className="flex-row flex-wrap">
@@ -180,7 +225,7 @@ export default function SongDisplay({ navigation }) {
                   </View>
                 ))}
               </>
-            ))}
+            ))} */}
 
           </View>
 
