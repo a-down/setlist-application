@@ -2,79 +2,6 @@ import { View, Text, Pressable, useWindowDimensions } from 'react-native';
 import song from '../utils/ComeOnGetHigher';
 
 export default function SongDisplay({ navigation }) {
-  const { width } = useWindowDimensions();
-
-  // const song = {
-  //   title: 'Come On Get Higher',
-  //   artist: 'Matt Nathanson',
-  //   key: 'F',
-  //   capo: {
-  //     capoPreferred: true,
-  //     capoKey: 'C',
-  //     capoPosition: 7
-  //   },
-  //   creator: 'a-down',
-  //   songData: [
-  //     {
-  //       sectionTitle: 'Chorus',
-  //       sectionLines: [
-  //         [
-  //           {
-  //             content: 'Well you only need the',
-  //             type: 'lyrics'
-  //           },
-  //           {
-  //             content: 'F',
-  //             type: 'chord'
-  //           },
-  //           {
-  //             content: "light when it's burning low",
-  //             type: 'lyrics'
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             content: 'Well you only need the',
-  //             type: 'lyrics'
-  //           },
-  //           {
-  //             content: 'F',
-  //             type: 'chord'
-  //           },
-  //           {
-  //             content: "light when it's burning",
-  //             type: 'lyrics'
-  //           },
-  //           {
-  //             content: 'F',
-  //             type: 'chord'
-  //           },
-  //           {
-  //             content: "low",
-  //             type: 'lyrics'
-  //           },
-  //         ],
-  //         [
-  //           {
-  //             content: 'Well you only need the',
-  //             type: 'lyrics'
-  //           },
-  //           {
-  //             content: 'F',
-  //             type: 'chord'
-  //           },
-  //           {
-  //             content: "light when it's burning low",
-  //             type: 'lyrics'
-  //           },
-  //         ],
-  //       ]
-  //     },
-  //   ]
-  // }
-
-  console.log(song.songData)
-
   function SongLineChord({ chord }) {
     
     return <Text className="text-brand-yellow bg-brand-navy py-px px-1">{chord}</Text>
@@ -155,10 +82,10 @@ export default function SongDisplay({ navigation }) {
 
 
 
-            {song.songData.map((section) => (
-              <>
-                {section.sectionLines.map((line) => (
-                  <View>
+            {song.songData.map((section, index) => (
+              <View key={index}>
+                {section.sectionLines.map((line, index) => (
+                  <View key={index}>
                     <View className="relative">
                       <View className="">
                         <Text style={{lineHeight: 40}} className="font-bold text-brand-navy">{line[0]}</Text>
@@ -167,7 +94,7 @@ export default function SongDisplay({ navigation }) {
                     </View>
                   </View>
                 ))}
-              </>
+              </View>
             ))}
 
             {/* {song.songData.map((section) => (

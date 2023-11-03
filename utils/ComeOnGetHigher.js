@@ -13,7 +13,7 @@ export default ComeOnGetHigher = {
       sectionTitle: 'Chorus',
       sectionLines: [
         [
-          "Em               C      G        C G        Em        G        C G        Em        G        C",
+          "Em                    C G        C G        Em        G        C G        Em        G        C",
           "I miss the sound of your voice I miss the sound of your voice"
         ],
         [
@@ -24,56 +24,6 @@ export default ComeOnGetHigher = {
           "Em               C      G        C G        Em        G        C G        Em        G        C",
           "I miss the sound of your voice I miss the sound of your voice"
         ],
-   
-
-        // [
-        //   {
-        //     content: 'Em7',
-        //     type: 'chord'
-        //   },
-        //   {
-        //     content: 'Cadd9',
-        //     type: 'chord'
-        //   },
-        //   {
-        //     content: 'G',
-        //     type: 'chord'
-        //   },
-        //   {
-        //     content: 'Em7',
-        //     type: 'chord'
-        //   },
-        //   {
-        //     content: 'Cadd9',
-        //     type: 'chord'
-        //   },
-        //   {
-        //     content: 'G',
-        //     type: 'chord'
-        //   },
-        // ],
-        // [
-        //   {
-        //     content: 'Em7',
-        //     type: 'chord'
-        //   },
-        //   {
-        //     content: 'I miss the',
-        //     type: 'lyrics'
-        //   },
-        //   {
-        //     content: 'Cadd9',
-        //     type: 'chord'
-        //   },
-        //   {
-        //     content: 'G',
-        //     type: 'chord'
-        //   },
-        //   {
-        //     content: "sound of your voice",
-        //     type: 'lyrics'
-        //   },
-        // ],
       ]
     },
   ]
