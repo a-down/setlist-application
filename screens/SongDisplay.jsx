@@ -160,9 +160,20 @@ export default function SongDisplay({ navigation }) {
                 {section.sectionLines.map((line) => (
                   <View>
                     <View className="relative">
-                      <View className="">
-                        <Text style={{lineHeight: 40}} className="font-bold text-brand-navy">{line[0]}</Text>
-                      </View>
+                      {/* <View className="">
+                        <Text style={{lineHeight: 40}} className="font-bold text-brand-navy">{console.log(line[0].split(" "))} </Text>
+                      </View> */}
+                      <View>
+                          <Text style={{lineHeight: 40}} className="text-brand-navy">
+                            {line[0].split(" ").map((word) => (
+                              <>
+                              {word 
+                                ? <Text className="font-bold bg-gray-200">{word + " "}</Text> 
+                                : <Text>{word + " "}</Text>}
+                              </>
+                            ))}
+                          </Text>
+                       </View>
                       <Text style={{lineHeight: 40}} className="text-brand-navy absolute top-5">{line[1]}</Text>
                     </View>
                   </View>
